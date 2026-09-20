@@ -1,0 +1,37 @@
+name: standards
+
+# Stability rule 4 — drift is checked, not trusted.
+# Runs on every push and pull request: a secret scan over the full history and
+# the consistency check (frontmatter, one authority per topic, announced
+# changes, palette drift).
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  secret-scan:
+    name: Secret scan (gitleaks, full history)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run gitleaks
+        run: |
+          docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:latest \
+            git /repo --redact --verbose --no-banner --exit-code 1
+
+  consistency:
+    name: Consistency check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run check_standards.py
+        run: python3 scripts/check_standards.py
