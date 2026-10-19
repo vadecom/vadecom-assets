@@ -1,8 +1,8 @@
 ---
 title: VadeCom Standards — How this repository works
 topic: governance
-version: 1.0.0
-updated: 2026-09-21
+version: 1.0.1
+updated: 2026-10-19
 status: authoritative
 ---
 
@@ -57,7 +57,7 @@ by decision.
 
 | Path | Owns | Status |
 |------|------|--------|
-| [`brand/colors.md`](brand/colors.md) | **Colour** — the closed palette, per-colour rules, pairings, machine-readable block | authoritative 2.0.0 |
+| [`brand/colors.md`](brand/colors.md) | **Colour** — the closed palette, per-colour rules, pairings, machine-readable block | authoritative 2.1.1 |
 | [`brand/logos/`](brand/logos/) | VadeCom logo files and their index | draft |
 | [`brand/almonaseb/`](brand/almonaseb/) | Almonaseb sub-brand assets (own palette and fonts) | draft |
 | [`brand/archive/`](brand/archive/) | Superseded artefacts, kept for the record | superseded |
@@ -102,6 +102,8 @@ standards are published here.
 
 ## Changelog
 
+- **1.0.1 — 2026-10-19** — Repository map: `brand/colors.md` is now
+  authoritative 2.1.1.
 - **1.0.0 — 2026-09-21** — Repository governance established: the four
   stability rules, status vocabulary, version bump policy, repository map,
   change procedure, AI reading order.
