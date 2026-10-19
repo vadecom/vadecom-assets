@@ -4,6 +4,11 @@ Every change to every standard in this repository, newest first. One line per
 file per change, in the form `- path X.Y.Z — what changed`. Superseded rules
 and artefacts are recorded here; they are never silently deleted.
 
+## 2026-10-19
+
+- brand/colors.md 2.1.1 — palette brought in line with vadecom.net (live since 2026-09-25, owner-approved 2026-09-26): closed set of eight. Yellow reinstated as `yellow-cta` (CTA buttons; accent on blue-base); `green-success` added as a functional colour (ticks, pricing, comparisons) with two tints for success components; three white overlays on blue-base added. Supersedes 2.0.0.
+- README.md 1.0.1 — repository map updated to brand/colors.md 2.1.1.
+
 ## 2026-09-21
 
 - README.md 1.0.0 — repository governance: the four stability rules, status vocabulary, version policy, change procedure, AI reading order.
